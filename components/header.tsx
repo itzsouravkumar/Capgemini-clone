@@ -1,14 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showTopRight, setShowTopRight] = useState(true);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
 
   const navItems = [
     "Insights",
@@ -25,41 +22,11 @@ export default function Header() {
     { label: "Global | EN 🌐", href: "#" },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY;
-
-      setIsScrolled(currentY > 0);
-      setShowTopRight(currentY === 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // run once on mount
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  console.log("isScrolled:", isScrolled, "isHovered:", isHovered);
-
   return (
-    <header
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className={`w-full sticky top-0 z-50 transition-all duration-500 ${
-        isScrolled || isHovered
-          ? "bg-white shadow-sm border-b border-gray-200 py-3"
-          : "bg-transparent py-6"
-      }`}
-    >
+    <header className="w-full sticky top-0 z-50 bg-white border-b border-gray-200 py-3">
       <div className="max-w-screen-2xl mx-auto px-4 lg:px-8">
         {/* Top Bar */}
-        <div
-          className={`hidden lg:flex justify-end overflow-hidden space-x-6 text-sm text-gray-800 font-medium transition-all duration-500 transform origin-bottom-left ${
-            showTopRight
-              ? "opacity-100 scale-100 translate-y-0 max-h-16"
-              : "opacity-0 scale-75 -translate-y-2 -translate-x-2 max-h-0"
-          }`}
-        >
+        <div className="hidden lg:flex justify-end space-x-6 text-sm text-gray-800 font-medium">
           {topRightItems.map((item, index) => (
             <Link
               key={index}
