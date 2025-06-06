@@ -90,18 +90,26 @@ export default function Footer() {
 
             <div className="max-w-screen-xl mx-auto w-full px-16 py-6 flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-0">
                 {/* Social Icons*/}
-                <div className="flex justify-center md:justify-end space-x-4 order-1 md:order-2 ">
+                <div className="flex justify-center md:justify-end space-x-4 order-1 md:order-2">
                     {[
                         { src: "/assets/fb.svg", alt: "Facebook" },
                         { src: "/assets/twit.svg", alt: "Twitter" },
                         { src: "/assets/linked.svg", alt: "LinkedIn" },
                         { src: "/assets/yt.svg", alt: "YouTube" },
                     ].map((icon, index) => (
-                        <Link href="#" key={index}>
-                            <div className="relative group w-10 h-10 rounded-full overflow-hidden border border-black hover:border-[#0e89e7] transition-colors duration-200 hover:zoom hover:scale-120 ease-in-out">
-                                <div
-                                    className="absolute inset-0 bg-[#0e89e7] rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 ease-out z-5"
-            
+                        <Link href="#" key={index} className="relative group">
+                            {/* Tooltip */}
+                            <span
+                                className="absolute -top-7 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap"
+                            >
+                                {icon.alt}
+                            </span>
+
+                            {/* Icon Button */}
+                            <div className="relative w-10 h-10 rounded-full overflow-hidden border border-black hover:border-[#0e89e7] transition-colors duration-200 group-hover:scale-110 ease-in-out">
+                                {/* Circular expanding background */}
+                                <div className="absolute inset-0 bg-[#0e89e7] rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 ease-out z-0
+          "
                                     style={{ transformOrigin: '-60% 70%' }}
                                 />
 
