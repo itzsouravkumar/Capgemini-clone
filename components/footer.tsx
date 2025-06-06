@@ -4,70 +4,125 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="bg-[#f5f5f5] text-sm font-poppins">
-            <div className="max-w-screen-xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
-                {/* Column 1 - Logo & Brands */}
-                <div className="flex flex-col items-start space-y-4">
-                    <Image src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/footer-logo.svg" alt="Capgemini" width={160} height={60} />
-                    <p className="mt-4 text-xl">Our brands:</p>
-                    <div className="space-y-3 mb-4">
-                        <Image src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/Logo_Capgemini_Engineering.svg" alt="Engineering" width={160} height={40} />
-                        <Image src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/Logo_Capgemini_Invent.svg" alt="Invent" width={160} height={40} />
-                        <Image src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/Logo_Sogeti.svg" alt="Sogeti" width={160} height={40} />
-                        <Image src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/Logo_Frog-Design.svg" alt="Frog" width={160} height={40} />
+        <footer className="bg-[#ececec] font-sans mt-12">
+            <div className="max-w-screen-xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8 border-b border-[#0d414793]">
+                {/* Column 1 */}
+                <div className="flex flex-col space-y-6 md:px-10 border-b border-[#0d414793] md:border-none pb-6 md:pb-0">
+                    <Image
+                        src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/footer-logo.svg"
+                        alt="Capgemini"
+                        width={160}
+                        height={60}
+                    />
+                    <p className="text-[16px]">Our brands:</p>
+                    <div className="space-y-4">
+                        <Image
+                            src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/Logo_Capgemini_Engineering.svg"
+                            alt="Engineering"
+                            width={210}
+                            height={40}
+                        />
+                        <Image
+                            src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/Logo_Capgemini_Invent.svg"
+                            alt="Invent"
+                            width={160}
+                            height={40}
+                        />
+                        <Image
+                            src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/Logo_Sogeti.svg"
+                            alt="Sogeti"
+                            width={160}
+                            height={40}
+                        />
+                        <Image
+                            src="https://www.capgemini.com/wp-content/themes/capgemini2020/assets/images/Logo_Frog-Design.svg"
+                            alt="Frog"
+                            width={160}
+                            height={40}
+                        />
                     </div>
                 </div>
 
                 {/* Column 2 */}
-                <div className="space-y-2 flex flex-col">
-                    <Link href="#">Insights</Link>
-                    <Link href="#">Industries</Link>
-                    <Link href="#">Services</Link>
-                    <Link href="#">Careers</Link>
-                    <Link href="#">News</Link>
-                    <Link href="#">About us</Link>
-                    <Link href="#">Contact us</Link>
-                    <Link href="#">Investors</Link>
+                <div className="space-y-4 flex flex-col text-[16px] border-b border-[#0d414793] md:border-none pb-6 md:pb-0">
+                    {[
+                        "Insights",
+                        "Industries",
+                        "Services",
+                        "Careers",
+                        "News",
+                        "About us",
+                        "Contact us",
+                        "Investors",
+                    ].map((text, idx) => (
+                        <Link
+                            href="#"
+                            key={text}
+                            className="relative w-fit transition-colors duration-300 text-[#0d4147] hover:text-[#0066b3] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#0066b3] after:transition-all after:duration-300 hover:after:w-full"
+                        >
+                            {text}
+                        </Link>
+                    ))}
                 </div>
 
                 {/* Column 3 */}
-                <div className="space-y-2 flex flex-col">
-                    <Link href="#">Accessibility</Link>
-                    <Link href="#">Cookie policy</Link>
-                    <Link href="#">Cookie settings</Link>
-                    <Link href="#">Privacy notice</Link>
-                    <Link href="#">Security vulnerability notification</Link>
-                    <Link href="#">SpeakUp</Link>
-                    <Link href="#">Terms of use</Link>
-                    <Link href="#">Fraud alert</Link>
-                </div>
-            </div>
-            <div className='max-w-screen-xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between'>
-                <div className="border-t border-gray-300 py-4 text-center text-xs text-gray-700 px-6">
-                    © Capgemini, 2025. All rights reserved.
-                </div>
-                {/* Column 4 - Socials */}
-                <div className="flex items-center gap-4 mt-6 md:mt-0">
+                <div className="space-y-4 flex flex-col text-[16px] pb-4 md:pb-0">
                     {[
-                        { platform: 'linkedin', url: '#' },
-                        { platform: 'instagram', url: '#' },
-                        { platform: 'facebook', url: '#' },
-                        { platform: 'youtube', url: '#' },
-                        { platform: 'tiktok', url: '#' },
-                    ].map(({ platform, url }) => (
-                        <Link key={platform} href="#" aria-label={platform}>
-                            <div className="w-9 h-9 rounded-full border border-black flex items-center justify-center hover:bg-gray-200 transition">
-                                <img
-                                    src={`/icons/${platform}.svg`}
-                                    alt={platform}
-                                    width={18}
-                                    height={18}
-                                />
-                            </div>
+                        "Accessibility",
+                        "Cookie policy",
+                        "Cookie settings",
+                        "Privacy notice",
+                        "Security vulnerability notification",
+                        "SpeakUp",
+                        "Terms of use",
+                        "Fraud alert",
+                    ].map((text, idx) => (
+                        <Link
+                            href="#"
+                            key={text}
+                            className="relative w-fit transition-colors duration-300 text-[#0d4147] hover:text-[#0066b3] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#0066b3] after:transition-all after:duration-300 hover:after:w-full"
+                        >
+                            {text}
                         </Link>
                     ))}
                 </div>
             </div>
+
+            <div className="max-w-screen-xl mx-auto w-full px-16 py-6 flex flex-col md:flex-row items-center md:justify-between gap-4 md:gap-0">
+                {/* Social Icons*/}
+                <div className="flex justify-center md:justify-end space-x-4 order-1 md:order-2 ">
+                    {[
+                        { src: "/assets/fb.svg", alt: "Facebook" },
+                        { src: "/assets/twit.svg", alt: "Twitter" },
+                        { src: "/assets/linked.svg", alt: "LinkedIn" },
+                        { src: "/assets/yt.svg", alt: "YouTube" },
+                    ].map((icon, index) => (
+                        <Link href="#" key={index}>
+                            <div className="relative group w-10 h-10 rounded-full overflow-hidden border border-black hover:border-[#0e89e7] transition-colors duration-200 hover:zoom hover:scale-120 ease-in-out">
+                                <div
+                                    className="absolute inset-0 bg-[#0e89e7] rounded-full scale-0 group-hover:scale-100 transition-transform duration-500 ease-out z-5"
+            
+                                    style={{ transformOrigin: '-60% 70%' }}
+                                />
+
+                                {/* Icon layer */}
+                                <div className="relative z-10 flex items-center justify-center w-full h-full">
+                                    <Image src={icon.src} alt={icon.alt} width={20} height={20} />
+                                </div>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+
+
+                {/* Copyright*/}
+                <div className="text-center text-[14px] text-[#0d4147] order-2 md:order-1">
+                    © 2023 Capgemini. All rights reserved.
+                </div>
+            </div>
+
+
+
         </footer>
     );
 }
