@@ -1,6 +1,6 @@
 # Capgemini Homepage Clone - Next.js Project
 
-This project is a pixel-perfect, responsive clone of the [Capgemini Official Homepage](https://www.capgemini.com/), built using **Next.js** with full support for animations, responsive design, and reusable components.
+This project is basic clone of the [Capgemini Official Homepage](https://www.capgemini.com/), built using **Next.js** with full support for animations, responsive design, and reusable components.
 
 ---
 
@@ -27,9 +27,9 @@ This project is a pixel-perfect, responsive clone of the [Capgemini Official Hom
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/capgemini-homepage-clone.git
+git clone https://github.com/your-username/capgemini-clone.git
 
-cd capgemini-homepage-clone
+cd capgemini-clone
 
 npm install
 
