@@ -1,0 +1,32 @@
+[
+  {
+    "image": "/assets/insight1.webp",
+    "heading": "ABN AMRO adopts a future-focused approach to Gen AI development",
+    "paragraph": "Working with Capgemini as its project partner, the bank transitions to Microsoft Copilot and launches a new Gen AI factory approach to become a personal bank in the digital age",
+    "link": "#"
+  },
+  {
+    "image": "/assets/insight2.webp",
+    "heading": "Global Bank accelerates digital transformation with cloud migration",
+    "paragraph": "Capgemini supports a seamless migration to the cloud, enabling faster innovation and improved customer experience.",
+    "link": "#"
+  },
+  {
+    "image": "/assets/insight1.webp",
+    "heading": "Retail leader leverages AI for personalized shopping",
+    "paragraph": "With Capgemini, the retailer uses AI to deliver tailored recommendations and boost sales conversion.",
+    "link": "google.com"
+  },
+  {
+    "image": "/assets/insight2.webp",
+    "heading": "Manufacturing giant drives efficiency with IoT solutions",
+    "paragraph": "Capgemini implements IoT platforms to optimize operations and reduce downtime for a global manufacturer.",
+    "link": "#"
+  },
+  {
+    "image": "/assets/insight1.webp",
+    "heading": "Insurance company reimagines claims with automation",
+    "paragraph": "Capgemini helps automate claims processing, reducing turnaround time and improving customer satisfaction.",
+    "link": "#"
+  }
+]

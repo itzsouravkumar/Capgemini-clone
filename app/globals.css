@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import "tailwindcss";
 
 html, body {
   font-family: 'Ubuntu', sans-serif;
+}
+
+body {
   margin: 0;
   padding: 0;
-  background: transparent;
-  width: 100%;
+  background-color: white;
+}
+
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('https://www.capgemini.com/wp-content/themes/capgemini2020/assets/fonts/Ubuntu-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .highlight-hover {
@@ -20,12 +29,17 @@ html, body {
   position: absolute;
   top: 0; left: 0; bottom: 0;
   width: 0;
-  background: rgba(0, 110, 255, 0.25);
+  background: linear-gradient(to right, #00E6E3 0%, #00E6E3 100%) no-repeat 0px 100% / 0px 100%;
   transition: width 0.5s ease;
   z-index: 0;
   pointer-events: none;
 }
 
 .highlight-hover:hover::before {
-  width: 100%;
+  width: auto;
+}
+
+a {
+  background: linear-gradient(to right, #00E6E3 0%, #00E6E3 100%) no-repeat 0px 100% / 0px 100%;
+  transition: all 0.2s ease-in-out;
 }
